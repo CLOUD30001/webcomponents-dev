@@ -1,3 +1,4 @@
+# Star rating sample referred from https://codepen.io/FredGenkin/pen/eaXYGV
 # Lit Starter Kit
 
 ### Links
