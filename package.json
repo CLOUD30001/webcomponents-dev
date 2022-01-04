@@ -1,0 +1,12 @@
+{
+  "name": "@wcd/cloud30001.litts-ky03y7ux",
+  "version": "0.0.0",
+  "description": "",
+  "license": "ISC",
+  "type": "module",
+  "homepage": "{{ homepage }}",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve Tw8kf7ss3xVlqTQ4raPz --open"
+  },
+  "dependencies": {}
+}
