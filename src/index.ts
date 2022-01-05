@@ -4,9 +4,12 @@ import {customElement, property} from 'lit/decorators.js';
 @customElement('star-rating')
 export class StarRating extends LitElement {
 
+  //Using expression in stylesheet
+  static starSize = css`60px`;
+
   static styles = css`
     :host {
-      --star-size: 60px;
+      --star-size: ${StarRating.starSize};
       --star-color: #fff;
       --star-background: #fc0;
       --start-count: var(--star-count, 1);
