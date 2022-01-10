@@ -7,8 +7,11 @@
 </head>
 
 <body>
-  <h1>Hello Counter!</h1>
-  <my-counter></my-counter>
+  <dropdown-app id="mySelect" name="World" title="Select Profile"></dropdown-app>
 </body>
 
+  <script>
+    var mySelect = document.getElementById('mySelect');
+    mySelect.addEventListener('selectChange', e => console.log('testing: ' + e.detail.text()));
+  </script>
 </html>
