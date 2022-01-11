@@ -100,12 +100,13 @@ export class DropDownApp extends LitElement {
   }
   
   private dispatch(e){
+    console.log('Inside Web component: ' +e.target.value);
     this.dispatchEvent(new CustomEvent('selectChange',{
   bubbles: true,
   detail: { text: () => e.target.value }}));
   }
   
-  async callDummyService(e){
+  async callDummyService(e: any){
     await fetch(`https://demo.vaadin.com/demo-data/1.0/people?count=10`)
         .then(r => r.json())
       .then(async data => {
