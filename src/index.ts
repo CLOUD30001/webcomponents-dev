@@ -3,37 +3,26 @@ import {customElement, property} from 'lit/decorators.js';
 
 @customElement('my-counter')
 export class SimpleGreeting extends LitElement {
-  @property() public count = 0;
 
-  static styles = css`
-    * {
-      font-size: 200%;
-    }
 
-    span {
-      width: 4rem;
-      display: inline-block;
-      text-align: center;
-    }
-
-    button {
-      width: 4rem;
-      height: 4rem;
-      border: none;
-      border-radius: 10px;
-      background-color: seagreen;
-      color: white;
-    }
-  `;
+  @property({type: Object, attribute: true, reflect: true})
+  myData = '{}'
 
   render() {
     return html`
-      <button @click="${this.dec}">-</button>
-      <span>${this.count}</span>
-      <button @click="${this.inc}">+</button>
+      Check console log.
     `;
   }
 
+  update(changedProperties: Map<string, unknown>) {
+  if (changedProperties.has("myData")) {
+    const oldValue = changedProperties.get("myData") as Object;
+    const newValue = this.myData;
+    console.log(newValue);
+    //this.loadAddress(newValue);
+  }
+  super.update(changedProperties);
+}
   inc() {
     this.count++;
   }

@@ -7,8 +7,16 @@
 </head>
 
 <body>
-  <h1>Hello Counter!</h1>
-  <my-counter></my-counter>
+  <input id="myButton" type="button" value="Send JSON"/>
+  <my-counter id="myCounter"></my-counter>
+
+  <script>
+    var btn = document.getElementById("myButton");
+    btn.addEventListener('click', function(){
+      var myCounter = document.getElementById("myCounter");
+      myCounter.setAttribute("myData", "{\"hello\": \"world2\"}"); 
+    });
+  </script>
 </body>
 
 </html>
